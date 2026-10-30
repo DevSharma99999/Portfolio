@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dev Sharma | Software Developer</title>
+<meta name="description" content="Dev Sharma, B.Tech student and aspiring SDE. Full-stack MERN projects, 400+ DSA problems solved in C++.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231d4ed8'/><text x='50' y='68' font-size='56' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='white'>DS</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f5f9;--surface:#ffffff;--ink:#101828;--muted:#475467;--line:#d0d5dd;--accent:#1d4ed8;--accent-ink:#ffffff;--chip:#e8eefc;
+  --head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0c111b;--surface:#131a28;--ink:#e7ecf4;--muted:#98a2b3;--line:#263042;--accent:#7aa2ff;--accent-ink:#0c111b;--chip:#1b2640}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--body);-webkit-text-size-adjust:100%}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:880px;margin:0 auto;padding:0 1.25rem}
+header.top{border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:.9rem;padding-bottom:.9rem;flex-wrap:wrap}
+.brand{font:700 1.05rem var(--head);color:var(--ink);text-decoration:none}
+nav{display:flex;gap:1.1rem;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none;font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--ink)}
+.hero{padding:4.5rem 0 3.5rem}
+.hero h1{font:800 clamp(2.8rem,10vw,5.6rem)/.98 var(--head);letter-spacing:-.03em;margin:0 0 1.25rem}
+.hero p.lead{font-size:1.2rem;max-width:34rem;margin:0 0 1.75rem;color:var(--muted)}
+.hero p.lead strong{color:var(--ink);font-weight:500}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem}
+.btn{display:inline-block;padding:.7rem 1.15rem;border-radius:8px;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:500}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{background:var(--chip)}
+.btn.primary:hover{filter:brightness(1.1);background:var(--accent)}
+section{padding:3rem 0;border-top:1px solid var(--line)}
+h2{font:700 1.7rem/1.2 var(--head);letter-spacing:-.01em;margin:0 0 1.5rem}
+.about p{max-width:38rem;margin:0 0 1rem}
+.project{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.5rem;margin-bottom:1.25rem}
+.project header{display:flex;justify-content:space-between;align-items:baseline;gap:.5rem 1rem;flex-wrap:wrap}
+.project h3{font:700 1.3rem var(--head);margin:0}
+.date{color:var(--muted);font-size:.9rem}
+.flow{list-style:none;display:flex;flex-wrap:wrap;gap:.35rem 0;padding:0;margin:1rem 0}
+.flow li{background:var(--chip);padding:.25rem .7rem;border-radius:6px;font-size:.88rem;font-weight:500}
+.flow li+li::before{content:"\203A";color:var(--muted);margin:0 .5rem 0 .15rem;margin-left:-.2rem}
+.flow li+li{margin-left:.55rem;position:relative}
+.flow li+li::before{position:absolute;left:-.6rem;margin:0}
+.project ul.pts{margin:0 0 1.1rem;padding-left:1.15rem}
+.project ul.pts li{margin-bottom:.35rem;max-width:42rem}
+.links{display:flex;gap:1.2rem;flex-wrap:wrap;font-weight:500}
+dl.skills{margin:0;display:grid;grid-template-columns:minmax(8rem,12rem) 1fr;gap:.9rem 1.25rem}
+dl.skills dt{font-weight:500;color:var(--muted)}
+dl.skills dd{margin:0}
+@media (max-width:560px){dl.skills{grid-template-columns:1fr;gap:.15rem}dl.skills dd{margin-bottom:.8rem}}
+.edu{display:flex;justify-content:space-between;gap:.5rem 1rem;flex-wrap:wrap;margin-bottom:1rem}
+.edu b{font-family:var(--head);font-size:1.1rem}
+.edu span.sub{display:block;color:var(--muted)}
+.contact p{max-width:34rem;margin:0 0 1.25rem}
+footer{border-top:1px solid var(--line);padding:1.5rem 0 2.5rem;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Dev Sharma</a>
+    <nav aria-label="Main">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <div class="hero">
+      <h1>Dev Sharma</h1>
+      <p class="lead">I build full-stack web apps and solve problems in C++. Pre-final-year B.Tech student, looking for an <strong>SDE role</strong> where I can ship backend and full-stack code.</p>
+      <div class="btns">
+        <a class="btn primary" href="Dev_Sharma_Resume.pdf" download>Download resume</a>
+        <a class="btn" href="https://github.com/DevSharma99999" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/dev-sharma-a09a12298" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://leetcode.com/u/Kaushikdev/" target="_blank" rel="noopener">LeetCode</a>
+      </div>
+    </div>
+
+    <section class="about" aria-labelledby="about-h">
+      <h2 id="about-h">About</h2>
+      <p>I study Electronics &amp; Computer Engineering at J.C. Bose University of Science &amp; Technology, YMCA, Faridabad (CGPA 8.20).</p>
+      <p>I have solved 400+ problems on LeetCode and GeeksforGeeks in C++, and I have built and deployed two MERN applications with authentication, REST APIs and third-party integrations.</p>
+      <p>My strongest areas are data structures and algorithms, OOP, DBMS, operating systems and backend design.</p>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-h">
+      <h2 id="projects-h">Projects</h2>
+
+      <article class="project">
+        <header>
+          <h3>Valdora: web-based streaming platform</h3>
+          <span class="date">Feb 2026 to May 2026</span>
+        </header>
+        <ol class="flow" aria-label="How a video moves through the system">
+          <li>Upload</li><li>FFmpeg</li><li>HLS segments</li><li>Cloudinary</li><li>React player</li>
+        </ol>
+        <ul class="pts">
+          <li>Built a YouTube-like platform with authentication, subscriptions and watch history.</li>
+          <li>Implemented HLS adaptive bitrate streaming with FFmpeg to reduce buffering on slow networks.</li>
+          <li>Stored and delivered video through Cloudinary.</li>
+          <li>Optimised data retrieval and backend queries for scalability.</li>
+        </ul>
+        <p class="date" style="margin:0 0 .8rem">React, Node.js, Express.js, MongoDB, Redis, FFmpeg, Cloudinary</p>
+        <div class="links">
+          <a href="https://streaming-ak-gamma.vercel.app" target="_blank" rel="noopener">Live demo</a>
+          <a href="https://github.com/DevSharma99999/streaming" target="_blank" rel="noopener">Source code</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <header>
+          <h3>MediConnect: doctor appointment and health platform</h3>
+          <span class="date">Jul 2025 to Nov 2025</span>
+        </header>
+        <ol class="flow" aria-label="How a request moves through the system">
+          <li>React client</li><li>Express REST API</li><li>JWT role check</li><li>MongoDB</li><li>Gemini API</li>
+        </ol>
+        <ul class="pts">
+          <li>Built an appointment booking system with role-based access for patients and doctors using JWT.</li>
+          <li>Designed the REST APIs and backend architecture in a team of two.</li>
+          <li>Added an AI health assistant with chat support, nutrition recommendations and daily health facts using the Google Gemini API.</li>
+        </ul>
+        <p class="date" style="margin:0 0 .8rem">Node.js, Express.js, MongoDB, JavaScript, JWT, Gemini API</p>
+        <div class="links">
+          <a href="https://hospitalmanagementwithmern.onrender.com/" target="_blank" rel="noopener">Live demo</a>
+          <a href="https://github.com/DevSharma99999/HospitalManagementwithMERN" target="_blank" rel="noopener">Source code</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-h">
+      <h2 id="skills-h">Skills</h2>
+      <dl class="skills">
+        <dt>Languages</dt><dd>C++, JavaScript</dd>
+        <dt>Web and backend</dt><dd>Node.js, Express.js, React.js, REST APIs, JWT authentication, HTML5, CSS</dd>
+        <dt>Data and caching</dt><dd>MongoDB, Redis</dd>
+        <dt>Tools and cloud</dt><dd>Git, GitHub, Postman, Cloudinary, FFmpeg, Vercel, Render</dd>
+        <dt>Computer science</dt><dd>Data structures and algorithms, time and space complexity, OOP, DBMS, operating systems, computer networks</dd>
+      </dl>
+    </section>
+
+    <section id="education" aria-labelledby="edu-h">
+      <h2 id="edu-h">Education and certification</h2>
+      <div class="edu">
+        <div><b>B.Tech, Electronics &amp; Computer Engineering</b><span class="sub">J.C. Bose University of Science &amp; Technology, YMCA, Faridabad. CGPA 8.20 / 10</span></div>
+        <span class="date">2023 to 2027</span>
+      </div>
+      <div class="edu">
+        <div><b>CodeChef C++ certification</b><span class="sub">Scored 90% (27 of 30 correct)</span></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Contact</h2>
+      <p>Open to SDE roles and referrals. The quickest way to reach me is email.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:kaushikdev381@gmail.com">kaushikdev381@gmail.com</a>
+        <a class="btn" href="tel:+919068265801">+91 90682 65801</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">Dev Sharma. Faridabad, Haryana, India.</div>
+</footer>
+</body>
+</html
